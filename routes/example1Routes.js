@@ -9,4 +9,8 @@ router.use(middleware);
 // Define the route and map it to the controller
 router.get('/example1', example1Controller.getExample1);
 
+// Redis routes
+router.post('/redis/insert', example1Controller.insertRedisData);
+router.get('/redis/get/:order_id', example1Controller.getRedisData);
+
 module.exports = router;
